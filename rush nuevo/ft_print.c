@@ -26,7 +26,8 @@ int	getdec(int nb)
 }
 
 int	getmult(int nb)
-{
+{   
+    
 	if (nb >= 1000000000)
 		return (1000000000);
 	else if (nb >= 1000000)

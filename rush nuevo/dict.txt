@@ -14,7 +14,7 @@
 13 : thirteen
 14 : forteen
 15 : fifteen
-16 : sixten
+16 : sixteen
 17 : seventeen
 18 : eighteen
 19 : nineteen

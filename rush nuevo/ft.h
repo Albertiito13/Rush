@@ -14,6 +14,7 @@ typedef struct s_list
 int		ft_atoi(const char *str);
 char	*ft_strdup(char *src);
 void	ft_putstr(char *str);
+void	free_dictionary(t_list *tab);
 
 /* Funciones de lectura */
 char	*ft_getnb(int fd);

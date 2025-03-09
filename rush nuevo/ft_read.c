@@ -72,19 +72,26 @@ char	*ft_getval(int fd, char *c)
 }
 
 /* process_line: Lee una línea del diccionario y la almacena en elem */
+/* process_line: Lee una línea del diccionario y almacena el par en elem */
+/* process_line: Lee una línea del diccionario y almacena el par en elem */
 static void	process_line(int fd, t_list *elem)
 {
 	char	c[1];
-	char	*tmp;
+	char	*tmp_nb;
+	char	*tmp_val;
 
-	elem->nb = ft_atoi(ft_getnb(fd));
+	tmp_nb = ft_getnb(fd);
+	elem->nb = ft_atoi(tmp_nb);
+	free(tmp_nb);
 	if (read(fd, c, 1) <= 0)
 		return ;
 	skip_sep(fd, c);
-	tmp = ft_getval(fd, c);
-	elem->val = ft_strdup(tmp);
-	free(tmp);
+	tmp_val = ft_getval(fd, c);
+	elem->val = ft_strdup(tmp_val);
+	free(tmp_val);
 }
+
+
 
 /* process: Abre el archivo y procesa 32 líneas, almacenándolas en un array de t_list */
 t_list	*process(char *file)

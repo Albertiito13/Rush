@@ -20,6 +20,7 @@ int	main(int ac, char **av)
 		}
 		tab = process("dict.txt");
 		ft_print(ft_atoi(av[1]), tab, first);
+		free_dictionary(tab);
 	}
 	return (0);
 }

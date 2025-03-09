@@ -57,3 +57,16 @@ void	ft_putstr(char *str)
 		i++;
 	}
 }
+
+void	free_dictionary(t_list *tab)
+{
+	int	i;
+
+	i = 0;
+	while (i < 32)
+	{
+		free(tab[i].val);
+		i++;
+	}
+	free(tab);
+}
